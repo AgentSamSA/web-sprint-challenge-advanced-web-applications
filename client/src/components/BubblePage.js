@@ -11,11 +11,13 @@ const BubblePage = () => {
   // set that data to the colorList state property
 
   useEffect(() => {
-    async () => {
+    async function getColors() {
       const res = await fetchColors();
       console.log(res);
       setColorList(res.data);
-    };
+    }
+
+    getColors();
   }, []);
 
   return (
