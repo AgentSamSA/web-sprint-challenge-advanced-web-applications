@@ -19,5 +19,5 @@ test("Fetches data and renders the bubbles", async () => {
   await wait(() => {
     const colors = screen.queryByText(/colors/i);
     expect(colors).toBeInTheDocument();
-  })
+  });
 });

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { axiosWithAuth } from "../utils/axiosWithAuth";
-import { useHistory } from "react-router-dom";
 
 const initialColor = {
   color: "",
@@ -26,6 +25,7 @@ const ColorList = ({ colors, updateColors }) => {
       .then((res) => {
         console.log(res.data);
         updateColors(res.data);
+        window.location.href="/protected";
       })
       .catch((err) => console.log(err));
   };
@@ -37,6 +37,7 @@ const ColorList = ({ colors, updateColors }) => {
       .then((res) => {
         console.log(res.data);
         updateColors(res.data);
+        window.location.href="/protected";
       })
       .catch((err) => console.log(err));
   };
